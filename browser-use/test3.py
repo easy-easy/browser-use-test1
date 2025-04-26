@@ -37,11 +37,8 @@ async def main():
     agent = Agent(
         task="""
             あなたは価格監視のエージェントです。
-            与えられたURLから商品の監視をしてください
-            対象商品は: hegehoge商品
-            - ecName: Sundrug-online url: https://sundrug-online.com/hegehoge
-            - ecName: Rakuten url: https://item.rakuten.co.jp/sundrug/hegehoge
-            - ecName: yodobashi url: https://www.yodobashi.com/product/hegehoge
+            以下のサイトから、人気トップ3のSDカードの価格を調べてください。
+            - ecName: kakaku url: https://kakaku.com/camera/sd-card/
 
             下記の形式でデータを教えてほしい
             - 価格
@@ -58,6 +55,6 @@ async def main():
 		controller=controller
     )
     result = await agent.run()
-    print(result)
+    # print(result)
 
 asyncio.run(main())

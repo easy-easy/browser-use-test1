@@ -6,14 +6,15 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "browser-use>=0.1.24",
+    "langchain-aws>=0.2.22",
     "langchain-openai>=0.3.14",
     "openai>=1.76.0",
 ]
 
 [tool.taskipy.tasks]
-sample = "python src/main.py"
-sample2 = "python browser-use/test1.py"
-format = "black src"
+sample = "python browser-use/test1.py"
+sample2 = "python browser-use/test2.py"
+sample3 = "python browser-use/test3.py"
 
 [dependency-groups]
 dev = [
